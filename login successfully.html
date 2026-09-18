@@ -92,38 +92,16 @@
         }
     </style>
 </head>
-
 <body>
-    <form id="loginform">
-        <p id="message"></p>
+    <form id="loginform" action="/login" method=""POST>
         <label>Username/email:</label>
-        <input id="username" type="text" type="email" placeholder="Enter your username/email id" name="Username">
+        <input id="username" type="text" type="email" placeholder="Enter your username/email id" name="Username" required>
         <br><br>
         <label>Password:</label>
-        <input id="password" type="password" placeholder="Enter your password">
+        <input id="password" type="password" placeholder="Enter your password" name="password" required>
         <br><br>
-        <Button type="submit" value="login">login</Button>
-        <br></br>
-    <script>
-        let params = new URLSearchParams(window.location.search)
-        let registeredusername = params.get("username")
-        let registeredpassword = params.get("password")
-        document.getElementById("loginform")
-            .addEventListener("submit",
-                function (event) {
-                    event.preventDefault()
-                    let username = document.getElementById("username").value
-                    let password = document.getElementById("password").value
-                    if (username === registeredusername && password === registeredpassword) {
-                        document.getElementById("message").innerHTML = username + "Logged in successfully!"
-                    }
-                    else {
-                        document.getElementById("message").innerHTML = username + "Login in failed!"
-                    }
-                }
-            )
-
-    </script>
+        <input type="submit" value="login">
+        <br><br>
     </form>
 </body>
 </html>

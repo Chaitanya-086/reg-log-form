@@ -78,18 +78,20 @@
 
 <body>
     <h1>Employee Registration form</h1>
-    <form id="registrationform" action="login successfully.html" method="GET">
+    <form id="registrationform" action="/register" method="POST">
         <label>Full name:</label>
         <input id="fullname" type="text" placeholder="Enter your fullname" name="fullname">
         <br><br>
         <label>Username/email:</label>
-        <input id="username" type="text" type="email" placeholder="Enter your username/email id" name="username">
+        <input id="username" type="text" type="email" placeholder="Enter your username/email id" name="username"
+            required>
         <br><br>
         <label>Password:</label>
-        <input id="password" type="password" placeholder="Enter your password" name="password">
+        <input id="password" type="password" placeholder="Enter your password" name="password" required>
         <br><br>
-        <Button type="submit" value="register">Register</Button>
-        <br></br>
+        <input type="submit" value="register">
+        <input type="reset" value="reset">
+        <br><br>
     </form>
 </body>
 
